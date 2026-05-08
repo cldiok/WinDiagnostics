@@ -1,5 +1,4 @@
-# PC Toolkit gerado por IA (apenas GPT)
-
+# PC Toolkit gerado por IA
 Toolkit de diagnóstico e reparo para Windows feito em Rust.
 
 ## Features
