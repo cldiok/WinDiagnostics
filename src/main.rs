@@ -5,14 +5,7 @@ mod system;
 mod disk;
 mod repair;
 mod report;
-mod benchmark;
 mod ui;
-
-fn banner() {
-    println!("{}", "========================================".cyan());
-    println!("{}", "      PC TOOLKIT - DIAGNOSTICO".cyan());
-    println!("{}", "========================================".cyan());
-}
 
 fn main() {
 

@@ -1,9 +1,10 @@
 use std::process::Command;
-use colored::*;
+
+use crate::ui;
 
 pub fn check_disk() {
 
-    println!("{}", "\n=== VERIFICANDO DISCO ===".yellow());
+    ui::section("VERIFICANDO DISCO");
 
     let output = Command::new("cmd")
         .args([

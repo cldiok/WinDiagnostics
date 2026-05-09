@@ -1,9 +1,11 @@
 use std::process::Command;
 use colored::*;
 
+use crate::ui;
+
 pub fn repair_windows() {
 
-    println!("{}", "\n=== REPARO DO WINDOWS ===".red());
+    ui::section("REPARO DO WINDOWS");
 
     println!("Executando SFC...");
 

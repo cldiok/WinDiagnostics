@@ -1,5 +1,6 @@
 use sysinfo::{System, Disks};
-use colored::*;
+
+use crate::ui;
 
 pub fn show_system_info() {
 
@@ -7,7 +8,7 @@ pub fn show_system_info() {
 
     sys.refresh_all();
 
-    println!("{}", "\n=== INFORMACOES DO SISTEMA ===".green());
+    ui::section("INFORMAÇÕES DO SISTEMA");
 
     println!(
         "Sistema: {}",
@@ -25,9 +26,9 @@ pub fn show_system_info() {
     );
 
     let ram =
-        sys.total_memory() / 1024 / 1024;
+        sys.total_memory() as f64 / 1024.0 / 1024.0 / 1024.0;
 
-    println!("RAM    : {} GB", ram);
+    println!("RAM    : {:.1} GB", ram);
 
     let disks = Disks::new_with_refreshed_list();
 
