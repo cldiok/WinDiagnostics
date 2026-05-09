@@ -1,5 +1,5 @@
-# PC Toolkit gerado por IA
-Toolkit de diagnóstico e reparo para Windows feito em Rust.
+# PC Toolkit
+Toolkit de diagnóstico e reparo para Windows feito em Rust, desenvolvido com auxílio de IA.
 
 ## Features
 
