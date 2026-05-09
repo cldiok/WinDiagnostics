@@ -4,7 +4,6 @@ Toolkit de diagnóstico e reparo para Windows feito em Rust.
 ## Features
 
 - Informações do sistema
-- Benchmark básico
 - Verificação de disco
 - Reparo do Windows
 - Exportação de relatório
