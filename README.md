@@ -21,14 +21,6 @@ cargo build --release
 cargo build --release --target x86_64-pc-windows-gnu
 ```
 
-## Roadmap
-
-- SMART real
-- Temperaturas
-- Interface TUI
-- Relatórios HTML
-- Benchmark avançado
-
 ## Requisitos
 
 Para as cores funcionarem corretamente no CMD do Windows, execute o seguinte comando como administrador:
