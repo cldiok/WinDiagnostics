@@ -9,6 +9,18 @@ mod ui;
 
 fn main() {
 
+    #[cfg(target_os = "windows")]
+    unsafe {
+        winapi::um::wincon::SetConsoleOutputCP(65001);
+    }
+
+
+    let tema = ColorfulTheme {
+        active_item_prefix: dialoguer::console::style(">".to_string()).for_stderr(),
+        ..ColorfulTheme::default()
+    };
+
+
     loop {
 
         ui::banner();
@@ -21,7 +33,7 @@ fn main() {
             "Sair"
         ];
 
-        let escolha = Select::with_theme(&ColorfulTheme::default())
+        let escolha = Select::with_theme(&tema)
             .with_prompt("Escolha uma opcao")
             .items(&items)
             .default(0)

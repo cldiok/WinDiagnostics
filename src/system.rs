@@ -1,5 +1,5 @@
 use sysinfo::{System, Disks};
-
+use std::process::Command;
 use crate::ui;
 
 pub fn show_system_info() {
@@ -10,10 +10,13 @@ pub fn show_system_info() {
 
     ui::section("INFORMAÇÕES DO SISTEMA");
 
-    println!(
-        "Sistema: {}",
-        System::name().unwrap_or("Desconhecido".to_string())
-    );
+    let output = Command::new("powershell")
+    .args(["-Command", "(Get-ComputerInfo).WindowsProductName"])
+    .output();
+
+    if let Ok(result) = output {
+        println!("Sistema: {}", String::from_utf8_lossy(&result.stdout).trim());
+    }
 
     println!(
         "Kernel : {}",

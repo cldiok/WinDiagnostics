@@ -4,7 +4,7 @@ pub fn banner() {
 
     println!("{}", "========================================".cyan());
 
-    println!("{}", "       PC TOOLKIT PROFISSIONAL".bright_green());
+    println!("{}", "               PC TOOLKIT               ".bright_green());
 
     println!("{}", "========================================".cyan());
 }
